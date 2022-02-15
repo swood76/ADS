@@ -1,0 +1,11 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity lab1_tb is 
+
+end lab1_tb;
+
+architecture ham_sandwich of lab1_tb is
+component DE10_Standard is 
+port (
+	

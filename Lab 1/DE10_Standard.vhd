@@ -11,11 +11,6 @@ port
 (
 
 	------------ CLOCK ------------
-	CLOCK2_50       	:in    	std_logic;
-	CLOCK3_50       	:in    	std_logic;
-	CLOCK4_50       	:in    	std_logic;
-	CLOCK_50        	:in    	std_logic;
-
 	------------ KEY ------------
 	KEY             	:in    	std_logic_vector(3 downto 0);
 
@@ -23,15 +18,9 @@ port
 	SW              	:in    	std_logic_vector(9 downto 0);
 
 	------------ LED ------------
-	LEDR            	:out   	std_logic_vector(9 downto 0);
+	LEDR            	:out   	std_logic_vector(9 downto 0)
 
 	------------ Seg7 ------------
-	HEX0            	:out   	std_logic_vector(6 downto 0);
-	HEX1            	:out   	std_logic_vector(6 downto 0);
-	HEX2            	:out   	std_logic_vector(6 downto 0);
-	HEX3            	:out   	std_logic_vector(6 downto 0);
-	HEX4            	:out   	std_logic_vector(6 downto 0);
-	HEX5            	:out   	std_logic_vector(6 downto 0)
 
 
 );
@@ -54,8 +43,12 @@ architecture rtl of DE10_Standard is
 		
 	signal Y_D, Y_Q:std_logic_vector(8 downto 0);
 	signal w:std_logic;
+	signal reset:std_logic;
+	signal clock:std_logic;
 begin
-	w <= SW(1);
+	w <= not SW(1);
+	reset <= not SW(0); 
+	clock <= not KEY(0);
 	
 	Y_D(0) <= '0';
 	Y_D(1) <= (Y_Q(0) or Y_Q(5) or Y_Q(6) or Y_Q(7) or Y_Q(8)) and not w;
@@ -70,69 +63,69 @@ begin
 	
 	ff0:flipflop
 	port map(
-		clk => KEY(0),
-		rst => SW(0),
+		clk => clock,
+		rst => reset,
 		d => Y_D(0),
 		q => Y_Q(0));
 	
 	ff1:flipflop
 	port map(
-		clk => KEY(0),
-		rst => SW(0),
+		clk => clock,
+		rst => reset,
 		d => Y_D(1),
 		q => Y_Q(1));
 	
 	ff2:flipflop
 	port map(
-		clk => KEY(0),
-		rst => SW(0),
+		clk => clock,
+		rst => reset,
 		d => Y_D(2),
 		q => Y_Q(2));
 		
 	ff3:flipflop
 	port map(
-		clk => KEY(0),
-		rst => SW(0),
+		clk => clock,
+		rst => reset,
 		d => Y_D(3),
 		q => Y_Q(3));
 	
 	ff4:flipflop
 	port map(
-		clk => KEY(0),
-		rst => SW(0),
+		clk => clock,
+		rst => reset,
 		d => Y_D(4),
 		q => Y_Q(4));
 	
 	ff5:flipflop
 	port map(
-		clk => KEY(0),
-		rst => SW(0),
+		clk => clock,
+		rst => reset,
 		d => Y_D(5),
 		q => Y_Q(5));
 	
 	ff6:flipflop
 	port map(
-		clk => KEY(0),
-		rst => SW(0),
+		clk => clock,
+		rst => reset,
 		d => Y_D(6),
 		q => Y_Q(6));
 	
 	ff7:flipflop
 	port map(
-		clk => KEY(0),
-		rst => SW(0),
+		clk => clock,
+		rst => reset,
 		d => Y_D(7),
 		q => Y_Q(7));
 	
 	ff8:flipflop
 	port map(
-		clk => KEY(0),
-		rst => SW(0),
+		clk => clock,
+		rst => reset,
 		d => Y_D(8),
 		q => Y_Q(8));
 		
 	LEDR(8 downto 0) <= Y_Q(8 downto 0);
-	LEDR(9) <= (Y_Q(4) or Y_Q(8));
+	LEDR(9) <=  not (Y_Q(4) or Y_Q(8));
 
 end rtl;
 

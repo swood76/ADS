@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab1
-Mon Feb 14 17:00:49 2022
+Mon Feb 14 19:16:55 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -44,14 +44,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Feb 14 17:00:49 2022       ;
+; Analysis & Synthesis Status     ; Successful - Mon Feb 14 19:16:54 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; lab1                                        ;
 ; Top-level Entity Name           ; DE10_Standard                               ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 8                                           ;
-; Total pins                      ; 70                                          ;
+; Total pins                      ; 24                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -194,14 +194,14 @@ refer to the applicable agreement for further details.
 ;                                             ;              ;
 ; Dedicated logic registers                   ; 8            ;
 ;                                             ;              ;
-; I/O pins                                    ; 70           ;
+; I/O pins                                    ; 24           ;
 ;                                             ;              ;
 ; Total DSP Blocks                            ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
 ; Maximum fan-out                             ; 8            ;
-; Total fan-out                               ; 129          ;
-; Average fan-out                             ; 0.82         ;
+; Total fan-out                               ; 83           ;
+; Average fan-out                             ; 1.28         ;
 +---------------------------------------------+--------------+
 
 
@@ -210,7 +210,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+---------------+--------------+
-; |DE10_Standard             ; 9 (9)               ; 8 (0)                     ; 0                 ; 0          ; 70   ; 0            ; |DE10_Standard              ; DE10_Standard ; work         ;
+; |DE10_Standard             ; 9 (9)               ; 8 (0)                     ; 0                 ; 0          ; 24   ; 0            ; |DE10_Standard              ; DE10_Standard ; work         ;
 ;    |flipflop:ff1|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|flipflop:ff1 ; flipflop      ; work         ;
 ;    |flipflop:ff2|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|flipflop:ff2 ; flipflop      ; work         ;
 ;    |flipflop:ff3|          ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|flipflop:ff3 ; flipflop      ; work         ;
@@ -264,16 +264,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 8                           ;
 ;     SCLR              ; 8                           ;
-; arriav_lcell_comb     ; 10                          ;
-;     normal            ; 10                          ;
+; arriav_lcell_comb     ; 11                          ;
+;     normal            ; 11                          ;
 ;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 5                           ;
 ;         3 data inputs ; 2                           ;
 ;         5 data inputs ; 2                           ;
-; boundary_port         ; 70                          ;
+; boundary_port         ; 24                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.86                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -292,95 +293,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Feb 14 17:00:33 2022
+    Info: Processing started: Mon Feb 14 19:16:38 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab1 -c lab1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file de10_standard.vhd
-    Info (12022): Found design unit 1: DE10_Standard-rtl File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 48
+    Info (12022): Found design unit 1: DE10_Standard-rtl File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 37
     Info (12023): Found entity 1: DE10_Standard File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file flipflop.vhd
     Info (12022): Found design unit 1: flipflop-imp File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/flipflop.vhd Line: 10
     Info (12023): Found entity 1: flipflop File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/flipflop.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file lab1_tb.vhd
+    Info (12022): Found design unit 1: lab1_tb-ham_sandwich File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/lab1_tb.vhd Line: 8
+    Info (12023): Found entity 1: lab1_tb File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/lab1_tb.vhd Line: 4
 Info (12127): Elaborating entity "DE10_Standard" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at DE10_Standard.vhd(29): used implicit default value for signal "HEX0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 29
-Warning (10541): VHDL Signal Declaration warning at DE10_Standard.vhd(30): used implicit default value for signal "HEX1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 30
-Warning (10541): VHDL Signal Declaration warning at DE10_Standard.vhd(31): used implicit default value for signal "HEX2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 31
-Warning (10541): VHDL Signal Declaration warning at DE10_Standard.vhd(32): used implicit default value for signal "HEX3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 32
-Warning (10541): VHDL Signal Declaration warning at DE10_Standard.vhd(33): used implicit default value for signal "HEX4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 33
-Warning (10541): VHDL Signal Declaration warning at DE10_Standard.vhd(34): used implicit default value for signal "HEX5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 34
-Info (12128): Elaborating entity "flipflop" for hierarchy "flipflop:ff0" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 71
+Info (12128): Elaborating entity "flipflop" for hierarchy "flipflop:ff0" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 64
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 26
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 29
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 29
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 29
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 29
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 29
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 29
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 29
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 30
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 30
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 30
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 30
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 30
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 30
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 30
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 31
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 31
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 31
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 31
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 31
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 31
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 31
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 32
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 32
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 32
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 32
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 32
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 32
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 32
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 33
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 33
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 33
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 33
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 33
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 33
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 33
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 34
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 34
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 34
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 34
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 34
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 34
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 34
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 21
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 15 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 14
-    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 15
-    Warning (15610): No output dependent on input pin "CLOCK4_50" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 16
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 17
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 20
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 20
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 20
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 23
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 23
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 23
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 23
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 23
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 23
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 23
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 23
-Info (21057): Implemented 79 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 52 output pins
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 15
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 15
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 15
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 18
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 18
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 18
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 18
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 18
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 18
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 18
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd Line: 18
+Info (21057): Implemented 33 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 10 output pins
     Info (21061): Implemented 9 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
     Info: Peak virtual memory: 4852 megabytes
-    Info: Processing ended: Mon Feb 14 17:00:49 2022
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:35
+    Info: Processing ended: Mon Feb 14 19:16:55 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:37
 
 

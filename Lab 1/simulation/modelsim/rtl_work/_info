@@ -1,0 +1,127 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/simulation/modelsim
+Ede10_standard
+Z1 w1644881366
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd
+Z5 FC:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd
+l0
+L9
+VIKaAz;`i_N^i3`A;c2ZAk0
+!s100 am<Q30cnXLFRiY`>VK_2n2
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1644884238
+!i10b 1
+Z8 !s108 1644884238.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd|
+Z10 !s107 C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+DEx4 work 13 de10_standard 0 22 IKaAz;`i_N^i3`A;c2ZAk0
+l48
+L37
+VfPYA@`Y5[Zb0o@^XfTO_=3
+!s100 aQhnkl:AL_:PNK:DnFGIW3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eflipflop
+Z13 w1644355025
+R2
+R3
+R0
+Z14 8C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/flipflop.vhd
+Z15 FC:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/flipflop.vhd
+l0
+L4
+VnLYDI<NBK@b@]`O47]9o51
+!s100 >1_>c1YPIF^9O`f6Z<Udf1
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/flipflop.vhd|
+Z17 !s107 C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/flipflop.vhd|
+!i113 1
+R11
+R12
+Aimp
+R2
+R3
+DEx4 work 8 flipflop 0 22 nLYDI<NBK@b@]`O47]9o51
+l11
+L10
+V<W_gg;OVk@YFk?OzUPfD63
+!s100 V>UFEn?CMP;OFSmD]SLS73
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Elab1_tb
+Z18 w1644884058
+R2
+R3
+R0
+Z19 8C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/lab1_tb.vhd
+Z20 FC:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/lab1_tb.vhd
+l0
+L4
+VM_B[4eCTL8dB5Wh>SIf0V2
+!s100 TZ:_V:ikN;:KSCTeCka;R1
+R6
+31
+Z21 !s110 1644884239
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/lab1_tb.vhd|
+Z23 !s107 C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/lab1_tb.vhd|
+!i113 1
+R11
+R12
+Aham_sandwich
+R2
+R3
+DEx4 work 7 lab1_tb 0 22 M_B[4eCTL8dB5Wh>SIf0V2
+l26
+L8
+Vb8eH?7kO?VTo3C^OnfNfl1
+!s100 RNh@FzN[^zUO3V39Eb44z2
+R6
+31
+R21
+!i10b 1
+R8
+R22
+R23
+!i113 1
+R11
+R12
