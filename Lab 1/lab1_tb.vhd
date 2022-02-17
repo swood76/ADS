@@ -29,7 +29,7 @@ clock <= not clock after 10 ns ;
 process begin
 	reset <= '1';
 
-	clock <= '0';
+	
 
 	
 	wait for 9 ns;
