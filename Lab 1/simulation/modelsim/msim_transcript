@@ -10,50 +10,39 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd}
+# vcom -93 -work work {C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:17:18 on Feb 14,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd 
+# Start time: 13:11:22 on Feb 28,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity DE10_Standard
-# -- Compiling architecture rtl of DE10_Standard
-# End time: 19:17:18 on Feb 14,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/flipflop.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:17:18 on Feb 14,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/flipflop.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity flipflop
-# -- Compiling architecture imp of flipflop
-# End time: 19:17:18 on Feb 14,2022, Elapsed time: 0:00:00
+# -- Compiling entity part2
+# -- Compiling architecture rtl of part2
+# End time: 13:11:22 on Feb 28,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/lab1_tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:17:18 on Feb 14,2022
+# Start time: 13:11:22 on Feb 28,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/lab1_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity lab1_tb
 # -- Compiling architecture ham_sandwich of lab1_tb
-# End time: 19:17:19 on Feb 14,2022, Elapsed time: 0:00:01
+# -- Loading entity part2
+# End time: 13:11:22 on Feb 28,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  lab1_tb
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" lab1_tb 
-# Start time: 19:17:19 on Feb 14,2022
+# Start time: 13:11:22 on Feb 28,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.lab1_tb(ham_sandwich)
-# Loading work.de10_standard(rtl)
-# Loading work.flipflop(imp)
+# Loading work.part2(rtl)
 # 
 # add wave *
 # view structure
@@ -61,5 +50,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 19:19:00 on Feb 14,2022, Elapsed time: 0:01:41
+# End time: 13:13:23 on Feb 28,2022, Elapsed time: 0:02:01
 # Errors: 0, Warnings: 0

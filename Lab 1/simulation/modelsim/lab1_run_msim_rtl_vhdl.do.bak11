@@ -5,8 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/DE10_Standard.vhd}
-vcom -93 -work work {C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/flipflop.vhd}
+vcom -93 -work work {C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd}
 
 vcom -93 -work work {C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/lab1_tb.vhd}
 

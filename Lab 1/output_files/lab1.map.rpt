@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab1
-Sun Feb 27 23:18:49 2022
+Mon Feb 28 13:09:16 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,10 +13,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. State Machine - |part2|y_Q
+  9. General Register Statistics
+ 10. Source assignments for Top-level Entity: |part2
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -42,13 +44,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Feb 27 23:18:49 2022       ;
+; Analysis & Synthesis Status     ; Successful - Mon Feb 28 13:09:16 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; lab1                                        ;
 ; Top-level Entity Name           ; part2                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
+; Total registers                 ; 4                                           ;
 ; Total pins                      ; 13                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -158,10 +160,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -174,31 +177,31 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 13    ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; w     ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 13    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimate of Logic utilization (ALMs needed) ; 8               ;
+;                                             ;                 ;
+; Combinational ALUT usage for logic          ; 13              ;
+;     -- 7 input functions                    ; 0               ;
+;     -- 6 input functions                    ; 3               ;
+;     -- 5 input functions                    ; 4               ;
+;     -- 4 input functions                    ; 6               ;
+;     -- <=3 input functions                  ; 0               ;
+;                                             ;                 ;
+; Dedicated logic registers                   ; 4               ;
+;                                             ;                 ;
+; I/O pins                                    ; 13              ;
+;                                             ;                 ;
+; Total DSP Blocks                            ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; y_Q.state_bit_1 ;
+; Maximum fan-out                             ; 13              ;
+; Total fan-out                               ; 92              ;
+; Average fan-out                             ; 2.14            ;
++---------------------------------------------+-----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -206,9 +209,27 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |part2                     ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 13   ; 0            ; |part2              ; part2       ; work         ;
+; |part2                     ; 13 (13)             ; 4 (4)                     ; 0                 ; 0          ; 13   ; 0            ; |part2              ; part2       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  Sequential Encoding
++-------------------------------------------------------------------------------+
+; State Machine - |part2|y_Q                                                    ;
++-------+-----------------+-----------------+-----------------+-----------------+
+; Name  ; y_Q.state_bit_3 ; y_Q.state_bit_2 ; y_Q.state_bit_1 ; y_Q.state_bit_0 ;
++-------+-----------------+-----------------+-----------------+-----------------+
+; y_Q.A ; 0               ; 0               ; 0               ; 0               ;
+; y_Q.B ; 0               ; 0               ; 0               ; 1               ;
+; y_Q.C ; 0               ; 0               ; 1               ; 0               ;
+; y_Q.D ; 0               ; 0               ; 1               ; 1               ;
+; y_Q.E ; 0               ; 1               ; 0               ; 0               ;
+; y_Q.F ; 0               ; 1               ; 0               ; 1               ;
+; y_Q.G ; 0               ; 1               ; 1               ; 0               ;
+; y_Q.H ; 0               ; 1               ; 1               ; 1               ;
+; y_Q.I ; 1               ; 0               ; 0               ; 0               ;
++-------+-----------------+-----------------+-----------------+-----------------+
 
 
 +------------------------------------------------------+
@@ -216,7 +237,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -226,18 +247,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++----------------------------------------------------+
+; Source assignments for Top-level Entity: |part2    ;
++--------------------------+------------+------+-----+
+; Assignment               ; Value      ; From ; To  ;
++--------------------------+------------+------+-----+
+; STATE_MACHINE_PROCESSING ; SEQUENTIAL ; -    ; y_Q ;
++--------------------------+------------+------+-----+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
+; arriav_ff             ; 4                           ;
+;     plain             ; 4                           ;
+; arriav_lcell_comb     ; 16                          ;
+;     normal            ; 16                          ;
 ;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         4 data inputs ; 6                           ;
+;         5 data inputs ; 4                           ;
+;         6 data inputs ; 3                           ;
 ; boundary_port         ; 13                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.26                        ;
 +-----------------------+-----------------------------+
 
 
@@ -256,7 +292,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Feb 27 23:18:38 2022
+    Info: Processing started: Mon Feb 28 13:09:01 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab1 -c lab1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -270,34 +306,19 @@ Info (12021): Found 2 design units, including 1 entities, in source file part2.v
     Info (12022): Found design unit 1: part2-rtl File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 16
     Info (12023): Found entity 1: part2 File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 4
 Info (12127): Elaborating entity "part2" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at part2.vhd(9): used implicit default value for signal "z" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 9
-Warning (10541): VHDL Signal Declaration warning at part2.vhd(10): used implicit default value for signal "led" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 10
-Warning (10541): VHDL Signal Declaration warning at part2.vhd(25): used implicit default value for signal "y_Q" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at part2.vhd(25): object "Y_D" assigned a value but never read File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 25
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "z" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 9
     Warning (13410): Pin "led[0]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 10
-    Warning (13410): Pin "led[1]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 10
-    Warning (13410): Pin "led[2]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 10
-    Warning (13410): Pin "led[3]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 10
-    Warning (13410): Pin "led[4]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 10
-    Warning (13410): Pin "led[5]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 10
-    Warning (13410): Pin "led[6]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 10
-    Warning (13410): Pin "led[7]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 10
-    Warning (13410): Pin "led[8]" is stuck at GND File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 10
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "w" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 6
-    Warning (15610): No output dependent on input pin "clock" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 7
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/jack_/Documents/Rowan/Complex Digital Systems/ADS/Lab 1/part2.vhd Line: 8
-Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 10 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4850 megabytes
-    Info: Processing ended: Sun Feb 27 23:18:49 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info (21061): Implemented 13 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Mon Feb 28 13:09:16 2022
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:32
 
 

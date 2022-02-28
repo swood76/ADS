@@ -62,9 +62,47 @@ end process;
 process (clock) -- state flip-flops
 begin
 
+	if rising_edge(clock) then
+			if reset = '1' then
+				y_Q <= A;
+			else
+				y_Q <= Y_D;
+			end if;
+		end if;
 
 end process;
 
 -- output and leds
-
+process(Y_D)
+begin
+	case Y_D is
+		when A => 
+			led(8 downto 0) <= "000000001";
+			z <= '0';
+		when B => 
+			led(8 downto 0) <= "000000010";
+			z <= '0';
+		when C => 
+			led(8 downto 0) <= "000000100";
+			z <= '0';
+		when D => 
+			led(8 downto 0) <= "000001000";
+			z <= '0';
+		when E => 
+			led(8 downto 0) <= "000010000";
+			z <= '1';
+		when F => 
+			led(8 downto 0) <= "000100000";
+			z <= '0';
+		when G => 
+			led(8 downto 0) <= "001000000";
+			z <= '0';
+		when H => 
+			led(8 downto 0) <= "010000000";
+			z <= '0';
+		when I => 
+			led(8 downto 0) <= "100000000";
+			z <= '1';
+	end case;	
+end process;
 end rtl;
