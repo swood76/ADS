@@ -1,5 +1,5 @@
 Flow report for lab1
-Mon Feb 14 19:16:55 2022
+Sun Feb 27 23:18:49 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Feb 14 19:16:54 2022       ;
+; Flow Status                     ; Successful - Sun Feb 27 23:18:49 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; lab1                                        ;
-; Top-level Entity Name           ; DE10_Standard                               ;
+; Top-level Entity Name           ; part2                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 8                                           ;
-; Total pins                      ; 24                                          ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 13                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -67,37 +67,37 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/14/2022 19:16:40 ;
+; Start date & time ; 02/27/2022 23:18:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lab1                ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                               ;
-+--------------------------------------+----------------------------------------+---------------+---------------+----------------+
-; Assignment Name                      ; Value                                  ; Default Value ; Entity Name   ; Section Id     ;
-+--------------------------------------+----------------------------------------+---------------+---------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 154027281743998.164488419902968        ; --            ; --            ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; lab1_tb        ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; lab1_tb                                ; --            ; --            ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --            ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                 ; <None>        ; --            ; --             ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --            ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; lab1_tb.vhd                            ; --            ; --            ; lab1_tb        ;
-; EDA_TEST_BENCH_MODULE_NAME           ; lab1_tb                                ; --            ; --            ; lab1_tb        ;
-; EDA_TEST_BENCH_NAME                  ; lab1_tb                                ; --            ; --            ; eda_simulation ;
-; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --            ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --            ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --            ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; DE10_Standard ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; DE10_Standard ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; DE10_Standard ; Top            ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --            ; --             ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --            ; --             ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --            ; --             ;
-; TOP_LEVEL_ENTITY                     ; DE10_Standard                          ; lab1          ; --            ; --             ;
-+--------------------------------------+----------------------------------------+---------------+---------------+----------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++--------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 154027281743998.164602191816648        ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; lab1_tb        ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; lab1_tb                                ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; lab1_tb.vhd                            ; --            ; --          ; lab1_tb        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; lab1_tb                                ; --            ; --          ; lab1_tb        ;
+; EDA_TEST_BENCH_NAME                  ; lab1_tb                                ; --            ; --          ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; part2       ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; part2       ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; part2       ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; part2                                  ; lab1          ; --          ; --             ;
++--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -105,8 +105,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4852 MB             ; 00:00:37                           ;
-; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:37                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4850 MB             ; 00:00:24                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

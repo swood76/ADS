@@ -1,113 +1,16 @@
-|DE10_Standard
-KEY[0] => flipflop:ff0.clk
-KEY[0] => flipflop:ff1.clk
-KEY[0] => flipflop:ff2.clk
-KEY[0] => flipflop:ff3.clk
-KEY[0] => flipflop:ff4.clk
-KEY[0] => flipflop:ff5.clk
-KEY[0] => flipflop:ff6.clk
-KEY[0] => flipflop:ff7.clk
-KEY[0] => flipflop:ff8.clk
-KEY[1] => ~NO_FANOUT~
-KEY[2] => ~NO_FANOUT~
-KEY[3] => ~NO_FANOUT~
-SW[0] => flipflop:ff0.rst
-SW[0] => flipflop:ff1.rst
-SW[0] => flipflop:ff2.rst
-SW[0] => flipflop:ff3.rst
-SW[0] => flipflop:ff4.rst
-SW[0] => flipflop:ff5.rst
-SW[0] => flipflop:ff6.rst
-SW[0] => flipflop:ff7.rst
-SW[0] => flipflop:ff8.rst
-SW[1] => Y_D[1].IN1
-SW[1] => Y_D[2].IN1
-SW[1] => Y_D[3].IN1
-SW[1] => Y_D[4].IN1
-SW[1] => Y_D[5].IN1
-SW[1] => Y_D[6].IN1
-SW[1] => Y_D[7].IN1
-SW[1] => Y_D[8].IN1
-SW[2] => ~NO_FANOUT~
-SW[3] => ~NO_FANOUT~
-SW[4] => ~NO_FANOUT~
-SW[5] => ~NO_FANOUT~
-SW[6] => ~NO_FANOUT~
-SW[7] => ~NO_FANOUT~
-SW[8] => ~NO_FANOUT~
-SW[9] => ~NO_FANOUT~
-LEDR[0] << flipflop:ff0.q
-LEDR[1] << flipflop:ff1.q
-LEDR[2] << flipflop:ff2.q
-LEDR[3] << flipflop:ff3.q
-LEDR[4] << flipflop:ff4.q
-LEDR[5] << flipflop:ff5.q
-LEDR[6] << flipflop:ff6.q
-LEDR[7] << flipflop:ff7.q
-LEDR[8] << flipflop:ff8.q
-LEDR[9] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|DE10_Standard|flipflop:ff0
-clk => q~reg0.CLK
-rst => q.OUTPUTSELECT
-d => q.DATAA
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|DE10_Standard|flipflop:ff1
-clk => q~reg0.CLK
-rst => q.OUTPUTSELECT
-d => q.DATAA
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|DE10_Standard|flipflop:ff2
-clk => q~reg0.CLK
-rst => q.OUTPUTSELECT
-d => q.DATAA
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|DE10_Standard|flipflop:ff3
-clk => q~reg0.CLK
-rst => q.OUTPUTSELECT
-d => q.DATAA
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|DE10_Standard|flipflop:ff4
-clk => q~reg0.CLK
-rst => q.OUTPUTSELECT
-d => q.DATAA
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|DE10_Standard|flipflop:ff5
-clk => q~reg0.CLK
-rst => q.OUTPUTSELECT
-d => q.DATAA
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|DE10_Standard|flipflop:ff6
-clk => q~reg0.CLK
-rst => q.OUTPUTSELECT
-d => q.DATAA
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|DE10_Standard|flipflop:ff7
-clk => q~reg0.CLK
-rst => q.OUTPUTSELECT
-d => q.DATAA
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|DE10_Standard|flipflop:ff8
-clk => q~reg0.CLK
-rst => q.OUTPUTSELECT
-d => q.DATAA
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|part2
+w => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= led[1].DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= led[2].DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= led[3].DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= led[4].DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= led[5].DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= led[6].DB_MAX_OUTPUT_PORT_TYPE
+led[7] <= led[7].DB_MAX_OUTPUT_PORT_TYPE
+led[8] <= led[8].DB_MAX_OUTPUT_PORT_TYPE
 
 

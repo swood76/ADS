@@ -49,15 +49,15 @@ begin
 	reset <= SW(0); 
 	clock <=  KEY(0);
 	
-	Y_D(0) <= reset or not Y_Q(0) or not  Y_Q(1) or not Y_Q(2) or not Y_Q(3) or not Y_Q(4) or not Y_Q(5) or not Y_Q(6) or not Y_Q(7) or not Y_Q(8);
-	Y_D(1) <= (Y_Q(0) or Y_Q(5) or Y_Q(6) or Y_Q(7) or Y_Q(8)) and not w;
-	Y_D(2) <= Y_Q(1) and not w;
-	Y_D(3) <= Y_Q(2) and not w;
-	Y_D(4) <= (Y_Q(3) or Y_Q(4)) and not w;
-	Y_D(5) <= (Y_Q(0) or Y_Q(1) or Y_Q(2) or Y_Q(3) or Y_Q(4)) and w;
-	Y_D(6) <= Y_Q(5) and w;
-	Y_D(7) <= Y_Q(6) and w;
-	Y_D(8) <= (Y_Q(7) or Y_Q(8)) and w;
+	Y_D(0) <= not Y_Q(0) and not  Y_Q(1) and not Y_Q(2) and not Y_Q(3) and not Y_Q(4) and not Y_Q(5) and not Y_Q(6) and not Y_Q(7) and not Y_Q(8);
+	Y_D(1) <= Y_Q(0) and Y_Q(1) and not Y_Q(2) and not Y_Q(3) and not Y_Q(4) and not Y_Q(5) and not Y_Q(6) and not Y_Q(7) and not Y_Q(8) and not w;
+	Y_D(2) <= Y_Q(0) and not Y_Q(1) and Y_Q(2) and not Y_Q(3) and not Y_Q(4) and not Y_Q(5) and not Y_Q(6) and not Y_Q(7) and not Y_Q(8) and not w;
+	Y_D(3) <= Y_Q(0) and not Y_Q(1) and not Y_Q(2) and Y_Q(3) and not Y_Q(4) and not Y_Q(5) and not Y_Q(6) and not Y_Q(7) and not Y_Q(8) and not w;
+	Y_D(4) <= Y_Q(0) and not Y_Q(1) and not Y_Q(2) and not Y_Q(3) and Y_Q(4) and not Y_Q(5) and not Y_Q(6) and not Y_Q(7) and not Y_Q(8) and not w;
+	Y_D(5) <= Y_Q(0) and not Y_Q(1) and not Y_Q(2) and not Y_Q(3) and not Y_Q(4) and Y_Q(5) and not Y_Q(6) and not Y_Q(7) and not Y_Q(8) and w;
+	Y_D(6) <= Y_Q(0) and not Y_Q(1) and not Y_Q(2) and not Y_Q(3) and not Y_Q(4) and not Y_Q(5) and Y_Q(6) and not Y_Q(7) and not Y_Q(8) and w;
+	Y_D(7) <= Y_Q(0) and not Y_Q(1) and not Y_Q(2) and not Y_Q(3) and not Y_Q(4) and not Y_Q(5) and not Y_Q(6) and Y_Q(7) and not Y_Q(8) and w;
+	Y_D(8) <= Y_Q(0) and not Y_Q(1) and not Y_Q(2) and not Y_Q(3) and not Y_Q(4) and not Y_Q(5) and not Y_Q(6) and not Y_Q(7) and Y_Q(8) and w;
 	
 	
 	ff0:flipflop
